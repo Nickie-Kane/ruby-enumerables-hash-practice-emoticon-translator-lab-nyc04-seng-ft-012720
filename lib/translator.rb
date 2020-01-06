@@ -13,10 +13,14 @@ def load_library(path)
   return e_hash
 end
 
-def get_japanese_emoticon
+def get_japanese_emoticon(path, emoticons)
   # code goes here
-  
-  
+  e_hash = load_library(path)
+  tra = e_hash[:g_emo][emoticons]
+  if tra == nil 
+    tra = "Sorry, that emoticon was not found."
+  end
+  return tra
 end
 
 def get_english_meaning
