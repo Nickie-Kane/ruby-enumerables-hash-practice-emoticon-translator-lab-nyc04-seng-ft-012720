@@ -18,7 +18,7 @@ def get_japanese_emoticon(path, emoticons)
   e_hash = load_library(path)
   tra = e_hash[:g_emo][emoticons]
   if tra == nil 
-    tra = "Sorry, that emoticon was not found."
+    tra = "Sorry, that emoticon was not found"
   end
   return tra
 end
